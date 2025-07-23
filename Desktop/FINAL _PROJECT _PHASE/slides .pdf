@@ -1,0 +1,101 @@
+
+Syriatel Customer Churn Analysis - Presentation Slides
+Slide 1: Title Slide
+Project Title: Syriatel Customer Churn Analysis
+Author: Mercy Chebet
+
+Slide 2: Project Overview
+Used machine learning classification to predict customer churn.
+Dataset: 3,333 records, 20 features.
+Churners: 14.49%, Non-churners: 85.51%.
+Evaluation metric: Recall.
+
+Slide 3: Business Understanding
+Customer churn affects telecom revenue.
+Retaining customers is cheaper than acquiring new ones.
+Goal: Predict churn and understand key drivers.
+
+Slide 4: Research Objectives
+Build an accurate model to predict churn.
+Identify important features linked to churn.
+
+Slide 5: Data Understanding
+Data types: Categorical & continuous.
+No missing or duplicate records.
+Converted area code to categorical.
+
+Slide 6: Target Variable Distribution
+Churn = 14.49%, Non-churn = 85.51%.
+Imbalanced dataset.
+Bar chart of churn distribution
+
+Slide 7: Feature Distributions
+Numeric features have varied scales.
+Some are skewed; require scaling.
+Histogram grid of numeric features
+
+Slide 8: Correlation Analysis
+Strong correlations between duration and charge features.
+Weak correlation between features and churn.
+Heatmap of correlation matrix
+
+Slide 9: Data Preparation
+Dropped highly correlated variables.
+Train-test split: 80/20.
+Applied SMOTE to balance training data.
+SMOTE chart showing class distribution
+
+Slide 10: Baseline Model: Logistic Regression
+Applied scaling.
+Performance:
+High train recall, low test recall.
+Overfitting observed.
+Confusion matrix plot
+
+Slide 11: Decision Tree Model
+Initial model had improved recall.
+Still overfitted slightly.
+Feature importance plot
+
+Slide 12: Feature Selection with RFECV
+Recursive Feature Elimination with Cross-Validation.
+Selected top 15 features out of 64.
+
+Slide 13: Hyperparameter Tuning
+Tuned using GridSearchCV.
+Best parameters:
+Criterion: entropy
+Max depth: 28
+Min samples leaf: 2
+Performance improved, reduced overfitting.
+
+Slide 14: Final Model Evaluation
+Recall: 0.65
+Precision: ~0.47
+Accuracy: ~0.86
+Confusion matrix and metrics summary
+
+Slide 15: ROC Curve
+ROC AUC: 0.65
+Model has moderate discriminative power.
+ROC Curve plot
+
+Slide 16: Key Predictive Features
+Total day minutes
+Total evening minutes
+Customer service calls
+Total international minutes
+
+Slide 17: Recommendations
+Improve customer service monitoring.
+Analyze and adjust call pricing.
+Focus retention on high-duration users.
+
+Slide 18: Next Steps
+Increase training data.
+Try ensemble models (e.g., XGBoost).
+Investigate external features like demographics.
+
+Slide 19: Thank You!
+Questions?
+Contact: Mercy Chebet
